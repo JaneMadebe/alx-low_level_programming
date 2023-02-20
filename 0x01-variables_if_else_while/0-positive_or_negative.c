@@ -1,10 +1,11 @@
-#include <stdio.h>
-n = random.randint(-10, 10)  # assigns a random integer between -10 and 10 to n
+#include <stdlib.h>
+#include <time.h>
+int main(void)
+{
+	int n;
 
-if n > 0:
-    print("n is positive")
-elif n == 0:
-    print("n is zero")
-else:
-    print("n is negative")
-
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	/* your code goes there */
+	return (0);
+}
