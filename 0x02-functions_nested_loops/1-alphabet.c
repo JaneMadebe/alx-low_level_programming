@@ -1,4 +1,4 @@
-#include "main.h"
+#include <ifndef main_h>
 
 /**
  * main - print_alphabet
