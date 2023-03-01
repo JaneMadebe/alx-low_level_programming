@@ -5,7 +5,6 @@
  * @a: an array of integers to be reversed
  * @n: the number of elements to swap in the array
  *
- * Return: nothing.
  */
 
 void reverse_array(int *a, int n)
