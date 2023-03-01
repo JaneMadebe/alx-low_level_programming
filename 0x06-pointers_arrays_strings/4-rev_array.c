@@ -6,14 +6,18 @@
  * @n: the number of elements to swap in the array
  *
  */
-
 void reverse_array(int *a, int n)
 {
-	int tmp, index;
+	int i = 0;
+	int j = n - 1;
 
-	for (index = n - 1; index >= n / 2; index--)
+	while (i < j)
 	{
-	tmp = a[n - 1 - index];
-	a[index] = tmp;
+	int temp = a[i];
+
+	a[i] = a[j];
+	a[j] = temp;
+	i++;
+	j--;
 	}
 }
