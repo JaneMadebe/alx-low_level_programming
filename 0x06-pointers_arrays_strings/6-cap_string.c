@@ -8,20 +8,31 @@
 
 char *cap_string(char *str)
 {
-int capitalize_next = 1;
-for (int i = 0; str[i] != '\0'; i++)
+int index = 0;
+
+while (str[index])
 {
-	if (isspace(str[i]) || str[i] == ',' || str[i] == ';' || str[i] == '.' ||
-	str[i] == '!' || str[i] == '?' || str[i] == '"' || str[i] == '(' ||
-	str[i] == ')' || str[i] == '{' || str[i] == '}')
-	{
-	capitalize_next = 1;
-	}
-	else if (capitalize_next)
-	{
-	str[i] = toupper(str[i]);
-	capitalize_next = 0;
-	}
+while (!(str[index] >= 'a' && str[index] <= 'z'))
+	index++;
+
+if (str[index - 1] == ' ' ||
+str[index - 1] == '\t' ||
+str[index - 1] == '\n' ||
+str[index - 1] == ',' ||
+str[index - 1] == ';' ||
+str[index - 1] == '.' ||
+str[index - 1] == '!' ||
+str[index - 1] == '?' ||
+str[index - 1] == '"' ||
+str[index - 1] == '(' ||
+str[index - 1] == ')' ||
+str[index - 1] == '{' ||
+str[index - 1] == '}' ||
+index == 0)
+	str[index] -= 32;
+index++;
 }
 return (str);
 }
+
+
